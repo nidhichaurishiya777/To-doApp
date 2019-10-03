@@ -6,7 +6,7 @@ import {Todocls} from '../todocls';
 })
 export class ToDoSerService {
 
-  private nextId: number;
+   nextId: number;
 
   constructor() {
  let todolist = this.getToDoList();
@@ -21,21 +21,22 @@ export class ToDoSerService {
   }
 
   
-  public getToDoList(): Todocls[] {
+ getToDoList(): Todocls[] {
 let localStorageList = JSON.parse(localStorage.getItem('todolist'));
     return localStorageList==null ? []: localStorageList.todolist;
       }
     
-    public addListItem(listItem : string){
-      let listItemValue= new Todocls(this.nextId, listItem);
+ addListItem(listItem : string){
+ console.log("Inside addListItem method of service and input value is- "+listItem)
+  let listItemValue= new Todocls(this.nextId, listItem);
   let todolist = this.getToDoList();
   todolist.push(listItemValue);
   this.setToDoList(todolist);
   this.nextId++;
-  console.log('next id in add method-' + this.nextId);
+  console.log('next id in addListItem method of service-' + this.nextId);
     }
     
-    private setToDoList(todolist: Todocls[]){
+   setToDoList(todolist: Todocls[]){
       localStorage.setItem('todolist',JSON.stringify({ todolist:todolist }));
     }
 

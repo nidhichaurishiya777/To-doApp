@@ -18,7 +18,7 @@ export class ToDoInputComponent implements OnInit {
   }
 
   addListItem() {
-   console.log("hi-"+this.listItem);
+   console.log("In addListItem of app-to-do-input and input is -"+this.listItem);
    this.todoserservice.addListItem(this.listItem);
   }
 

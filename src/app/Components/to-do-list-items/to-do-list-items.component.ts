@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import {ToDoSerService} from '../../Service/to-do-ser.service';
 
 @Component({
   selector: 'app-to-do-list-items',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./to-do-list-items.component.css']
 })
 export class ToDoListItemsComponent implements OnInit {
+  
+  @Input()
+  private todolist: ToDoSerService;
 
   constructor() { }
 

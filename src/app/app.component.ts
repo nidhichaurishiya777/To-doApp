@@ -8,5 +8,7 @@ import {ToDoSerService} from './Service/to-do-ser.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private todoserservice: ToDoSerService) {
+  }
   title = 'TO-DO List';
 }
