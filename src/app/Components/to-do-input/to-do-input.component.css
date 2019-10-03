@@ -1,0 +1,11 @@
+.app-input-fill{
+    border:blue;
+    border-style: double;
+    margin-left:175px;
+   margin-top: 20px;
+   width: 70%;
+}
+.app-add-button{
+    color:cornsilk;
+    margin-left: 50px;
+}
